@@ -1,6 +1,6 @@
 public class IntegerTreeScript {
 	public void launch() {
-		int[] integerArray = {6,5,9,3};
+		int[] integerArray = {6,5,9,3,8,11,12};
 		
 		IntegerTreeNode root = new IntegerTreeNode(integerArray[0]);
 		for (int i=1; i<integerArray.length;i++) {
@@ -10,21 +10,21 @@ public class IntegerTreeScript {
 		System.out.println("Maximum value = " + root.getMax());
 		System.out.println("Minimum value = " + root.getMin());
 		
-		if (root.contains(76)) {
-			System.out.println("76 exists");
+		if (root.contains(12)) {
+			System.out.println("12 exists");
 		}
 		else {
-			System.out.println("76 does not exist");
+			System.out.println("12 does not exist");
 		}
 		
-		if (root.contains(7699)) {
-			System.out.println("7699 exists");
+		if (root.contains(1)) {
+			System.out.println("1 exists");
 		}
 		else {
-			System.out.println("7699 does not exist");
+			System.out.println("1 does not exist");
 		}
 		
-		root.printTree();
+		System.out.println(root.toString());
 	}
 	
 	public static void main(String[] args) {

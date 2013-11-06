@@ -71,21 +71,24 @@ public class IntegerTreeNode {
 		}
 	}
 	
-	public boolean printTree() {
-		String output = "[" + value + " ";
-		if (left==null) {
+	public String toString() {
+		String output = "[" + value;
+		if (left==null && right==null) {
+			output=output+"L[]R[]";
+			return output+"]";
+		} 
+		if (left == null) {
 			output=output+"L[]";
-			if (right==null) {
-				System.out.print(output+" R[]");
-				return false;
-			} else {
-				System.out.print(output+"R");
-				return right.printTree();
-			}
 		} else {
-			System.out.print(output+"L");
-			return left.printTree();
+			output=output+"L" + left.toString();
 		}
+		
+		if (right==null) {
+			output=output+"R[]";
+		} else {
+			output=output + "R" + right.toString();
+		}
+		return output+"]";
 	}
 	
 	/*public boolean printIntegerlist() {
